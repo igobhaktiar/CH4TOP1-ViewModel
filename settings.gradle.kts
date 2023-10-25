@@ -2,6 +2,7 @@ pluginManagement {
     repositories {
         google()
         mavenCentral()
+        mavenLocal()
         gradlePluginPortal()
     }
 }
@@ -10,9 +11,12 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        mavenLocal()
+        gradlePluginPortal()
 
     }
 }
+
 
 rootProject.name = "CH4TOP1-ViewModel"
 include(":app")

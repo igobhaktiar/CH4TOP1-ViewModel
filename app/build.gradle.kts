@@ -6,7 +6,7 @@ plugins {
 
 android {
     namespace = "firgobhaktiar.synergybatch6.ch4top1_viewmodel"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "firgobhaktiar.synergybatch6.ch4top1_viewmodel"
@@ -55,7 +55,7 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 
     // ViewModel
-    implementation("androidx.lifecycle:lifecycle-view-model-ktx:2.6.2")
+//    implementation("androidx.lifecycle:lifecycle-view-model-ktx:2.6.4")
     implementation("androidx.activity:activity-ktx:1.8.0")
     implementation("androidx.fragment:fragment-ktx:1.6.1")
 

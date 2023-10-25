@@ -29,6 +29,7 @@ class FlavorFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+
         binding?.btnNext?.setOnClickListener {
             if (binding?.rbVanilla?.isChecked == true) {
                 sharedViewModel.setFlavor(getString(R.string.vanilla))
@@ -48,7 +49,12 @@ class FlavorFragment : Fragment() {
             cancelOrder()
         }
 
+        // Set Price
+        binding?.tvSubtotal?.text = sharedViewModel.price.value
+
+
     }
+
 
     private fun goToNextPage() {
         findNavController().navigate(R.id.action_flavorFragment_to_pickupFragment)

@@ -36,7 +36,7 @@ class OrderViewModel : ViewModel() {
 
     // possible price options
     private val _price = MutableLiveData<Double>()
-    val price: LiveData<String> = this._price.map {
+    val price: LiveData<String> = _price.map {
         NumberFormat.getCurrencyInstance().format(it)
     }
 
@@ -62,12 +62,11 @@ class OrderViewModel : ViewModel() {
     private fun updatePrice() {
         var calculatedPrice = (quantity.value ?: 0) * PRICE_PER_CUPCAKE
 
+        _price.value = calculatedPrice
         // add extra for same day pickup
         if (dateOptions[0] == _date.value) {
             calculatedPrice += PRICE_FOR_SAME_DAY_PICKUP
         }
-
-        _price.value = calculatedPrice
     }
 
     // set the flavor of cupcakes
